@@ -3,7 +3,7 @@ import LayoutProfesor from '../layouts/LayoutProfesor';
 import Dashboard from '../pages/Profesor/Dashboard';
 import Clases from '../pages/Profesor/Clases';
 import Estudiantes from '../pages/Profesor/Estudiantes';
-import Reservas from '../pages/Profesor/Resevas';
+import Reservas from '../pages/Profesor/Reservas';
 import Informes from '../pages/Profesor/Informes';
 import Configuracion from '../pages/Profesor/Configuracion';
 

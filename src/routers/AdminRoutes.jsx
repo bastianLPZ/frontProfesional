@@ -13,11 +13,7 @@ import Configuracion from '../pages/Administrador/Configuracion';
 import Horas from '../pages/Administrador/Horas';
 import Clases from '../pages/Administrador/Clases';
 import Personal from '../pages/Administrador/Personal';
-import ReservasPorUsuario from '../pages/Administrador/Reportes/ReservasPorUsuario';
-import UsoCanchasSubcanchas from '../pages/Administrador/Reportes/UsoCanchasSubcanchas';
-import MantenimientoCanchas from '../pages/Administrador/Reportes/MantenimientoCanchas';
-import ClasesPorProfesor from '../pages/Administrador/Reportes/ClasesPorProfesor';
-import ResumenGeneral from '../pages/Administrador/Reportes/ResumenGeneral';
+
 
 const AdminRouter = createBrowserRouter([
   {

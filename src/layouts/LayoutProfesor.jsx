@@ -1,4 +1,3 @@
-import React from 'react';
 import { Outlet } from 'react-router-dom'; // Este componente se usa para renderizar las rutas hijas
 import Sidebar from '../components/Profesor/Sidebar'; // Asegúrate de que el archivo Sidebar.js esté en el mismo directorio
 import Navbar from '../components/Profesor/Navbar'; // Asegúrate de que el archivo Navbar.js esté en el mismo directorio

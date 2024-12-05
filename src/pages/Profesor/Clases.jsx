@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Row, Col, Button } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 import CardClass from "../../components/Profesor/MisClases/CardClass"; // Asegúrate de importar el componente CardClass

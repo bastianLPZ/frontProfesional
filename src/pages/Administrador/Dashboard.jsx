@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Card from '../../components/Administrador/Dashboard/Card';
 import dashboardService from '../../services/Administrador/dashboardService'; // Asegúrate de que la ruta sea correcta
 import Cancha from '../../components/Administrador/Dashboard/Cancha';

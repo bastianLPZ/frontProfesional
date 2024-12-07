@@ -4,7 +4,7 @@ import Navbar from '../components/Profesor/Navbar'; // Asegúrate de que el arch
 
 const LayoutProfesor = () => {
   return (
-    <div className="flex h-screen w-screen">
+    <div className="flex h-screen w-screen overflow-x-hidden overflow-y-hidden">
       {/* Sidebar de navegación con un ancho fijo */}
       <div className="w-1/5"> {/* Ajusta el ancho del Sidebar aquí */}
         <Sidebar />

@@ -60,26 +60,10 @@ function UserDashboard() {
         </Col>
         <Col span={6}>
           <CardMetric
-            title="Mensajes Nuevos"
+            title="Actividades en curso"
             value={metrics.mensajes_nuevos}
-            icon={<MessageOutlined style={{ color: "#52C41A" }} />}
-            backgroundColor="#F6FFED"
-          />
-        </Col>
-        <Col span={6}>
-          <CardMetric
-            title="Notificaciones"
-            value={metrics.notificaciones}
-            icon={<BellOutlined style={{ color: "#1890FF" }} />}
-            backgroundColor="#E6F7FF"
-          />
-        </Col>
-        <Col span={6}>
-          <CardMetric
-            title="Logros Desbloqueados"
-            value={metrics.logros_desbloqueados}
-            icon={<SmileOutlined style={{ color: "#FAAD14" }} />}
-            backgroundColor="#FFFBE6"
+            icon={<MessageOutlined style={{ color: "#87CEEB" }} />}
+            backgroundColor="#F0F8FF"
           />
         </Col>
       </Row>

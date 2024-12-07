@@ -17,7 +17,9 @@ const clasesService = {
 
     createClass: async (data) => {
         try {
-            const response = await axios.post(`${API_URL}/crear-clase/`, data); // Cambiado a POST
+            let objetoTemporal = JSON.parse(localStorage.getItem('user'));
+            let copiaData = {...data, user_id: objetoTemporal.id};
+            const response = await axios.post(`${API_URL}/crear-clase/`, copiaData); // Cambiado a POST
             console.log('Clase creada:', response.data);
             return response.data;
         } catch (error) {

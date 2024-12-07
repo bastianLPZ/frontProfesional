@@ -1,6 +1,6 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import Login from '../pages/General/Login'; // Asegúrate de que la ruta es correcta
-
+import Register from '../pages/General/Register';
 const generalRoutes = createBrowserRouter([
   {
     path: '/',
@@ -9,6 +9,10 @@ const generalRoutes = createBrowserRouter([
   {
     path: '/login',
     element: <Login /> // También puedes tener esta ruta si deseas
+  },
+  {
+    path: '/registro',
+    element: <Register /> // Asegúrate de que la ruta es correcta
   },
   {
     path: '*', // Ruta wildcard para manejar rutas no encontradas

@@ -43,7 +43,7 @@ const Sidebar = () => {
         {/* Informes */}
         <Link to="/usuario/informes" className="w-full h-full block text-primary hover:text-secondary">
           <MenuItem className="hover:bg-gray-100 focus:bg-gray-200 transition-all" icon={<ChartBarSquareIcon className="h-5 w-5 text-primary" />}>
-            informes
+            Informes
           </MenuItem>
         </Link>
 

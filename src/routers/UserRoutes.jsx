@@ -2,7 +2,7 @@ import { createBrowserRouter, Navigate } from 'react-router-dom';
 import LayoutUsuario from '../layouts/LayoutUsuario';
 import Dashboard from '../pages/Usuario/Dashboard';
 import Configuracion from '../pages/Usuario/Configuracion';
-
+import Clases from '../pages/Usuario/Clases';
 const UserRouter = createBrowserRouter([
   {
     path: '/usuario',
@@ -15,7 +15,12 @@ const UserRouter = createBrowserRouter([
       {
         path: 'configuracion',
         element: <Configuracion/>
+      },
+      {
+        path: 'clases',
+        element: <Clases />
       }
+
       // Otras rutas para el administrador
     ]
   },

@@ -22,7 +22,7 @@ const clasesService = {
             return response.data;
         } catch (error) {
             console.error('Error al crear la clase:', error);
-            throw error; // Lanza el error
+            // Lanza el error
         }
     },
 

@@ -14,7 +14,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault(); // Evita el comportamiento predeterminado del formulario
     const { success, usuario, error: errorMessage } = await loginUser(username, password);
-  
+
     if (success) {
       console.log("Usuario guardado en localStorage:", usuario);
       setIsAuth(true);
@@ -26,6 +26,10 @@ const Login = () => {
     }
   };
 
+  const handleSignUpRedirect = () => {
+    navigate("/registro"); // Redirige a la ruta correcta para el registro // Redirige a la página de creación de cuenta
+  };
+
   return (
     <div className="flex h-screen w-screen">
       <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: `url(${background})` }}>
@@ -33,7 +37,7 @@ const Login = () => {
         <div className="flex items-center justify-center h-full">
           <div className="bg-white bg-opacity-60 p-8 rounded-lg shadow-lg w-96 relative z-10">
             <h1 className="text-3xl font-bold text-center text-[#35682d] mb-10">Iniciar Sesión</h1>
-            <form onSubmit={handleLogin} className="space-y-10">
+            <form onSubmit={handleLogin} className="space-y-6">
               <input
                 type="text"
                 placeholder="Nombre de usuario"
@@ -58,6 +62,14 @@ const Login = () => {
               </button>
             </form>
             {error && <p className="mt-4 text-red-500 text-center">{error}</p>}
+            <div className="mt-4 text-center">
+              <button
+                onClick={handleSignUpRedirect}
+                className="text-sm text-[#35682d] underline hover:text-[#274b1a]"
+              >
+                ¿No tienes cuenta? Crear una aquí
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -8,22 +8,24 @@ const Clases = ()=>{
     const [clases, setClases] = useState({}); // Cambiado a objeto
 
     useEffect(() => {
-        // Lógica para obtener las clases
-        const getClases = async () => {
-          try {
-            const clases = await ClasesUsuarioService.getClases();
-            console.log("Clases:", clases);
-            setClases(clases);
-          } catch (error) {
-            console.error("Error al obtener las clases:", error);
-          }
-        };
-
-
-        getClases();
+        ClasesUsuarioService.getClases()
+            .then((response) => {
+                console.log("Clases recibidas:", response);
+                setClases(response);
+            })
+            .catch((error) => {
+                console.error("Error fetching clases:", error);
+            });
+        
     }, []);
+
+
     const handleAddStudent = (id) => {
-        console.log(`Unirse a la clase con ID: ${id}`);
+        console.log("La clase tiene id: " + id);
+        let objetoTemporal ={};
+        objetoTemporal.id_clase = id;
+        objetoTemporal.id_usuario = JSON.parse(localStorage.getItem('user')).id;
+        ClasesUsuarioService.unirseClase(objetoTemporal)
     }
 
     return(
@@ -34,9 +36,15 @@ const Clases = ()=>{
                 </Col>
             </Row>
             <Row gutter={[16, 16]}>
-                <Col span={24}>
-                    <CardClass  clase={clases} onAddStudent={()=>{handleAddStudent}} />
-                </Col>
+                {clases && clases.length > 0 ? (clases.map((clase) => (
+                    <Col key={clase.id} xs={8} sm={8} md={8} lg={8}>
+                        <CardClass clase={clase} onAddStudent={handleAddStudent} />
+                    </Col>
+                ))) : (
+                    <Col span={24}>
+                        <h2 className="text-lg font-semibold">No hay clases disponibles</h2>
+                    </Col>
+                )}
             </Row>
 
 
